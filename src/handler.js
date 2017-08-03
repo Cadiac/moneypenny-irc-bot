@@ -47,12 +47,8 @@ class MessageHandler {
     return ircBot;
   }
 
-  isChannelMessage(to) {
-    return to.match(/^[#&]/);
-  }
-
   handleIrcMessage(from, to, message) {
-    if (isChannelMessage(to)) {
+    if (to.match(/^[#&]/)) {
       logger.info(`[IRC] from: ${from}, to: ${to}, message: ${message}`);
 
       this.ciClient.sendMessage(message, { channel: to });
