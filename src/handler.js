@@ -10,6 +10,9 @@ class MessageHandler {
     this.ciClient = this.createCIClient();
     this.ircBot = this.createIrcClient();
 
+    this.handleIrcMessage = this.handleIrcMessage.bind(this);
+    this.handleCIMessage = this.this.handleCIMessage.bind(this);
+
     this.ircBot.addListener('message', this.handleIrcMessage);
     this.ciClient.setReceiver(this.handleCIMessage);
   }
