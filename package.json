@@ -1,0 +1,23 @@
+{
+  "name": "moneypenny-irc-bot",
+  "version": "1.0.0",
+  "description": "IRC bot for communicating with the Central Intelligence server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "irc",
+    "bot",
+    "central",
+    "intelligence",
+    "tammerforce",
+    "iot"
+  ],
+  "author": "Jaakko Husso (jaakko.husso@futurice.com)",
+  "license": "MIT",
+  "dependencies": {
+    "ci-client": "mikko/CentralIntelligence-client",
+    "node-irc": "^0.0.4"
+  }
+}
