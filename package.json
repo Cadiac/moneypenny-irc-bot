@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "ci-client": "mikko/CentralIntelligence-client",
+    "ip": "^1.1.5",
     "irc": "^0.5.2",
     "winston": "^2.3.1"
   }

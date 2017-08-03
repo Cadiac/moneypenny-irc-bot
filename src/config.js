@@ -13,6 +13,11 @@ const IRC_RETRY_DELAY = process.env.IRC_RETRY_DELAY || 60;
 const IRC_FLOOD_PROTECTION = (process.env.IRC_FLOOD_PROTECTION || 'true') === 'true';
 const IRC_FLOOD_PROTECTION_DELAY = process.env.IRC_FLOOD_PROTECTION_DELAY || 60;
 
+const CI_NAME = process.env.CI_NAME || 'ircbot';
+const CI_SERVER_HOST = process.env.CI_SERVER_HOST;
+const CI_SERVER_PORT = process.env.CI_SERVER_PORT;
+const CI_RECEIVER_PORT = process.env.CI_RECEIVER_PORT;
+
 module.exports = {
   IRC_SERVER_PORT,
   IRC_NICK,
@@ -25,4 +30,8 @@ module.exports = {
   IRC_RETRY_DELAY,
   IRC_FLOOD_PROTECTION,
   IRC_FLOOD_PROTECTION_DELAY,
+  CI_NAME,
+  CI_SERVER_HOST,
+  CI_SERVER_PORT,
+  CI_RECEIVER_PORT,
 }
