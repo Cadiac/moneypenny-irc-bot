@@ -1,3 +1,5 @@
+const ip = require('ip');
+
 // Set NODE_ENV to development if not set
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -16,6 +18,7 @@ const IRC_FLOOD_PROTECTION_DELAY = process.env.IRC_FLOOD_PROTECTION_DELAY || 60
 const CI_NAME = process.env.CI_NAME || 'ircbot';
 const CI_SERVER_HOST = process.env.CI_SERVER_HOST;
 const CI_SERVER_PORT = process.env.CI_SERVER_PORT;
+const CI_RECEIVER_HOST = process.env.CI_RECEIVER_HOST || ip.address();
 const CI_RECEIVER_PORT = process.env.CI_RECEIVER_PORT;
 
 module.exports = {

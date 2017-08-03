@@ -1,6 +1,5 @@
 const irc = require('irc');
 const logger = require('winston');
-const ip = require('ip');
 const Client = require('ci-client');
 
 const config = require('./config');
@@ -64,7 +63,7 @@ class MessageHandler {
       name: config.CI_NAME,
       serverHost: config.CI_SERVER_HOST,
       serverPort: config.CI_SERVER_PORT,
-      myHost: ip.address(),
+      myHost: config.CI_SERVER_HOST,
       myPort: config.CI_RECEIVER_PORT,
     };
 
